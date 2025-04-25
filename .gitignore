@@ -1,0 +1,82 @@
+
+# Compiled python modules.
+*.pyc
+.ruffcache
+.venv
+.venv/*
+#mac hidden files
+.DS_store
+# Setuptools distribution folder.
+/dist/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info
+/*.egg
+.vscode
+.VSCodeCounter
+.coverage
+.pytest_cache
+.pypirc
+.vim
+.vscode
+.env*
+.localenv
+*.jpg
+*.tiff
+*.gif
+*.ini
+*/app_env.yml
+app/.venv/pyvenv.cfg
+db/dumps/*
+data/input/pexels/*
+data/input/inspiration/*
+data/input/variants/*
+data/input/pickle/*
+data/input/sql/*
+data/output/*
+db/assets/shp/*
+
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ignore any .tfvars files that are generated automatically for each Terraform run. Most
+# .tfvars files are managed as part of configuration and so should be included in
+# version control.
+#
+# example.tfvars
+.tfvars
+terraform.tfvars
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include override files you do wish to add to version control using negated pattern
+# !example_override.tf
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# example: *tfplan*
+
+# End of https://www.gitignore.io/api/python,terraform
+.vscode
+.pdm.toml
+logs.txt
+*.pkl
+/*.txt
+/*.csv
+/*.pickle
+__pypackages__*
+
+# Pyenv
+.python-version
