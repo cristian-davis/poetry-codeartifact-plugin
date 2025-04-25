@@ -1,5 +1,5 @@
 [project]
-name = "poetry-codeartifact-plugin"
+name = "poetry-codeartifact-auth-plugin"
 version = "0.1.0"
 description = "Poetry plugin to authenticate to codeartifact"
 authors = [
@@ -18,7 +18,7 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [project.entry-points."poetry.plugin"]
-poetry-codeartifact-plugin = "poetry_codeartifact_plugin.plugin:CodeartifactLoginPlugin"
+poetry-codeartifact-auth-plugin = "poetry_codeartifact_auth_plugin.plugin:CodeartifactLoginPlugin"
 
 [tool.poetry.group.dev]
 optional = true
