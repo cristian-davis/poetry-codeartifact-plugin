@@ -17,8 +17,11 @@ class CodeartifactLoginPlugin(Plugin):
         for source in sources:
             if not isinstance(source, dict):
                 raise ValueError("Source must be a dictionary")
-            if "name" not in source or "url" not in source:
+            source_name = source.get("name", None)
+            # Pypi should not have a url set as it's implicit for Poetry
+            if ("url" not in source and source_name and source_name.lower() != "pypi") or not source_name:
                 raise ValueError("Source must have 'name' and 'url' keys")
+
         return sources
 
     def find_codeartifact_sources(self, data: TOMLDocument) -> list:
