@@ -1,6 +1,6 @@
 [project]
 name = "poetry-codeartifact-auth-plugin"
-version = "0.2.0"
+version = "0.2.1"
 description = "Poetry plugin to authenticate to codeartifact"
 authors = [
     {name = "Cristian Davis",email = "cristian.davis@sandsdev.com"}

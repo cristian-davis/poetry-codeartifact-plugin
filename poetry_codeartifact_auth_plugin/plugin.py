@@ -26,13 +26,13 @@ class CodeartifactLoginPlugin(Plugin):
 
     def find_codeartifact_sources(self, data: TOMLDocument) -> list:
         sources = self.find_sources(data)
-        return [source for source in sources if "codeartifact" in source["url"]]
+        return [source for source in sources if ("url" in source and "codeartifact" in source["url"])]
 
     def get_codeartifact_credentials(self, source: dict) -> dict:
         client = boto3.client("codeartifact")
         try:
             domain_data = re.match(
-                r"^https://(?P<domain>[^.]+)\.d\.codeartifact", source["url"]
+                r"^https://(?P<domain>[^.]+)\.d\.codeartifact", source.get("url", "")
             )
             if not domain_data:
                 raise ValueError("Invalid CodeArtifact URL")
